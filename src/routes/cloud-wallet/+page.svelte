@@ -53,9 +53,9 @@ export let form;
     </div>
   </form>
   {#if form?.success}
-    <!-- this message is ephemeral; it exists because the page was rendered in
-		   response to a form submission. it will vanish if the user reloads -->
-    <p class="pt-2">Logged In. Your balance is {form?.balance}!</p>
+  <p class="pt-2 text-green-500 font-semibold">
+    Logged In successfully ,<span class=" text-red-500">your balance: {form?.balance}</span> 
+  </p>
   {/if}
 </div>
 
@@ -143,6 +143,6 @@ export let form;
   {#if form?.success}
     <!-- this message is ephemeral; it exists because the page was rendered in
 		   response to a form submission. it will vanish if the user reloads -->
-    <p class="pt-2">The payment was successful. Here is your <a href="https://whatsonchain.com/tx/{form?.payment}">transaction</a>!</p>
+    <p class="pt-2">The payment was successful. Here is your <a target="_blank" class="text-indigo-500 font-semibold underline" href={`https://whatsonchain.com/tx/${form?.payResponse}`}> transaction </a>!</p>
   {/if}
 </div>
