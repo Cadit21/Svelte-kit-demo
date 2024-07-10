@@ -52,7 +52,7 @@ export let form;
       </button>
     </div>
   </form>
-  {#if form?.success}
+  {#if form?.auth}
   <p class="pt-2 text-green-500 font-semibold">
     Logged In successfully ,<span class=" text-red-500">your balance: {form?.balance}</span> 
   </p>

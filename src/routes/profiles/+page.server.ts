@@ -78,7 +78,7 @@ export const actions = {
      SET email = ${email}
      WHERE id= ${id};`
 	
-	 	return { success: true };
+	 	return { succ: true };
 	 },
 
   delete: async ({ request }) => {
@@ -92,7 +92,7 @@ export const actions = {
     DELETE FROM names
     WHERE id = ${id};`
 	
-		return { success: true };
+		return { succ: true };
 	},
 
 	create: async ({request}) => {
