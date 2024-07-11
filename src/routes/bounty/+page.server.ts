@@ -34,10 +34,11 @@ export const actions = {
         return { success: true, txid: deployTx.id };
     },
     unlock: async ({ request }) => {
-        await signer.login('sales@timechainlabs.io', 'string')
+        
         await Root.loadArtifact()
         const data = await request.formData();
-        const root = BigInt(data.get('root'))
+        const root = BigInt(data.get('root'));
+        await instance.connect(signer);
         const { tx: callTx } = await instance.methods.unlock(root)
         console.log(
             'contract unlocked successfully : https://whatsonchain.com/tx/' +
