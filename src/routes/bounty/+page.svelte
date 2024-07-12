@@ -54,7 +54,7 @@
       </button>
     </div>
   </form>
-  {#if form?.success}
+  {#if form?.deployed}
     <!-- this message is ephemeral; it exists because the page was rendered in
 		   response to a form submission. it will vanish if the user reloads -->
     <p class="pt-2">Bounty was deployed successfully: <a href={' https://whatsonchain.com/tx/'+form?.txid}>Transaction Link</a>!</p>
@@ -95,7 +95,7 @@
       </button>
     </div>
   </form>
-  {#if form?.deployed}
+  {#if form?.success}
     <!-- this message is ephemeral; it exists because the page was rendered in
 		   response to a form submission. it will vanish if the user reloads -->
     <p class="pt-2">Bounty was unlocked successfully: <a href={ 'https://whatsonchain.com/tx/'+form?.txid}>Transaction Link</a>!</p>
